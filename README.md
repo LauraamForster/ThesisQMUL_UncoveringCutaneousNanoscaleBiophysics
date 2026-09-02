@@ -1,7 +1,7 @@
 # ThesisQMUL_UncoveringCutaneousNanoscaleBiophysics
 Thesis by Laura Forster and Himadri Gupta
 
-Analysis code for Laura Forster's thesis work with Himadri Gupta at Queen Mary University of London (QMUL).
+Analysis code for Laura Forster's thesis work with Prof. Himadri Gupta and Dr. Emanuel Rognoni at Queen Mary University of London (QMUL).
 
 The repository contains separate processing workflows for three experimental techniques:
 
@@ -11,7 +11,7 @@ The repository contains separate processing workflows for three experimental tec
 
 The outputs from these technique-specific workflows are brought together in **`Final analysis/`** for experiment-level, multi-technique analysis.
 
-> **Important:** this repository contains analysis code and manifests, but not the full raw datasets. Several scripts currently contain absolute paths to the author's computer and external drive. Update the paths and check the settings at the top of a driver script before running it.
+> **Important:** this repository contains analysis code and manifests, but not the full raw datasets. Several scripts currently contain absolute paths - update the paths and check the settings at the top of a driver script before running it.
 
 ## Repository structure
 
@@ -37,43 +37,31 @@ raw exported data → driver script → technique-specific functions → process
 
 ## Before running the code
 
-### 1. Get the repository
+### 1. Create a Python environment
 
-```bash
-git clone https://github.com/LauraamForster/ThesisQMUL_UncoveringCutaneousNanoscaleBiophysics.git
-cd ThesisQMUL_UncoveringCutaneousNanoscaleBiophysics
-```
+The scripts use the following main packages:
 
-### 2. Create a Python environment
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+statsmodels
+lmfit
+openpyxl
+h5py
+pyFAI
+ramanspy
+tkinter
 
-Python 3.10 or newer is recommended. The scripts use the following main packages:
+### 2. Provide the data and update paths
 
-```bash
-python -m venv .venv
-source .venv/bin/activate          # macOS/Linux
-# .venv\Scripts\activate           # Windows
-
-python -m pip install numpy pandas matplotlib scipy scikit-learn statsmodels lmfit openpyxl h5py pyFAI ramanspy
-```
-
-`tkinter` is also used by `Raman/RamanCutting3.py` and may need to be installed separately, depending on the Python distribution.
-
-### 3. Provide the data and update paths
-
-The raw datasets are not stored in this repository. Before running a workflow:
-
-1. Obtain the relevant raw data, processed data and manifest files from the project owner.
+1. Obtain the relevant raw data, processed data and generate (or edit existing) manifest files. 
 2. Open the relevant driver script.
-3. Replace the absolute `DataDir`, manifest, calibration, input and output paths with paths on your computer.
+3. Replace the absolute `DataDir`, manifest, calibration, input and output paths with current paths.
 4. Check the experiment, subtype, region, scan number and plotting settings near the top of the script.
 5. Run the script from its own directory so that its companion function module can be imported.
 
-For example:
-
-```bash
-cd Nanoindentation
-python Call_NI_Model_Functions2.py
-```
 
 ## Workflow 1: Nanoindentation
 
@@ -92,7 +80,14 @@ The driver reads raw text exports from a matrix or line scan, then:
 6. calculates loading stress–strain values; and
 7. writes fitted parameters to CSV and diagnostic plots to PDF.
 
-Edit the settings near the top of the driver, particularly `group`, `settype`, `toscan`, `foldergroup`, `region`, the input/output paths and fitting parameters.
+Edit the settings near the top of the driver:
+`group`
+`settype`
+`toscan`
+`foldergroup`
+`region`
+input/output paths
+fitting parameters
 
 ### B. Compare samples and conditions
 
@@ -102,9 +97,15 @@ Edit the settings near the top of the driver, particularly `group`, `settype`, `
 
 This stage reads the fitted CSV files through a manifest, trims and normalises line-scan positions, divides the dermis into spatial bins, and produces comparisons such as bar/violin plots, spatial trends, correlations, PCA and statistical models.
 
-Check `set_type`, `manifest_path`, `base_path`, `regions`, `groups`, `nbins`, `layer` and the selected plot variable before running.
-
-> On a case-sensitive system, make sure the configured `WoundingManifest6.csv` path matches the repository filename `woundingManifest6.csv`.
+Check:
+`set_type`
+`manifest_path`
+`base_path`
+`regions`
+`groups`
+`nbins`
+`layer`
+selected plot variables
 
 ## Workflow 2: Raman spectroscopy
 
@@ -127,9 +128,18 @@ The selected driver reads spectral files, a sample manifest and a peak manifest.
 6. calculates peak-region or fitted-component measurements; and
 7. produces average spectra, PCA/loadings and other diagnostic plots.
 
-Before running, set `DataDir`, `PeakDir`, `ManifestDir`, `Save_folder`, `Type`, spectral ranges, `NBins`, preprocessing choices and plot modes. The Excel manifests included in `Raman/` show the expected metadata structure.
+Before running, set:
+`DataDir`
+`PeakDir`
+`ManifestDir`
+`Save_folder`
+`Type`
+spectral ranges`
+`NBins`
+preprocessing choices
+plot modes
 
-`Raman/RamanCutting3.py` is an interactive helper for inspecting/cutting Raman maps; it is not the main batch driver.
+`Raman/RamanCutting3.py` is an interactive helper for inspecting/cutting Raman maps into the different skin layers (run via terminal if needed)
 
 ## Workflow 3: SAXS
 
@@ -147,11 +157,18 @@ The SAXS workflow processes Diamond Light Source I22 NeXus (`.nxs`) data:
 5. write fitted measurements to CSV; and
 6. create maps and diagnostic plots.
 
-Before running, review the experiment and scan definitions, input/output paths, mask and calibrant paths, reduction flags, q/chi ranges, fitting thresholds and optional frame selections near the top of `SAXS_DriverFile.py`.
+Before running, check:
+the experiment and scan definitions
+input/output paths
+mask and calibrant paths (these are specific to each experiment date)
+reduction flags
+q/chi ranges
+fitting thresholds
+optional frame selections near the top of `SAXS_DriverFile.py`.
 
-The SAXS scripts import `Utils.py`, which is currently stored in `SAXS/HelpfulExtras/`. Ensure that module is importable (for example, by running with that folder on `PYTHONPATH`) before starting the driver.
+The SAXS scripts import `Utils.py`, which is currently stored in `SAXS/HelpfulExtras/`
 
-Scripts in `SAXS/HelpfulExtras/` and `SAXS/RadiationDamage/` are supporting or specialist analyses rather than the default pipeline.
+Scripts in `SAXS/HelpfulExtras/` and `SAXS/RadiationDamage/` are supporting scripts for things like colourmap visualisation without having to run the entire pipeline. 
 
 ## Workflow 4: Final multi-technique analysis
 
@@ -185,26 +202,4 @@ Run the matching analysis script after the export is complete:
 
 These scripts read the standardised workbooks, apply experiment-specific labels and ordering, and generate the cross-technique plots and statistical comparisons used in the thesis analysis.
 
-Run final-analysis scripts from the `Final analysis/` directory:
-
-```bash
-cd "Final analysis"
-python AllAnalysisExport.py
-python AllAnalysis_Wounding.py
-```
-
-## Recommended run order
-
-For a new experiment or regenerated dataset:
-
-1. Complete the raw **nanoindentation** fitting and check the CSV/PDF diagnostics.
-2. Run the **nanoindentation** technique-level analysis and verify manifest/sample matching.
-3. Run the appropriate **Raman** driver and inspect preprocessing, spectra and PCA outputs.
-4. Run the **SAXS** reduction and fitting, then inspect the fitted CSVs and spatial maps.
-5. Confirm that sample names, subtype labels and tissue-region labels agree across techniques.
-6. Run the matching `AllAnalysisExport*.py` script.
-7. Open several exported workbooks and check sheet names, row counts, units and missing values.
-8. Run the matching `AllAnalysis_*.py` script to generate combined figures and statistics.
-
-See `SUPERVISOR_WORKFLOW.md` for a shorter operational guide and handover checklist.
 
