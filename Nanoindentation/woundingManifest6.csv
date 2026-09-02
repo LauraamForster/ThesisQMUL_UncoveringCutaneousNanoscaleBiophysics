@@ -1,0 +1,22 @@
+﻿SAMPLE NAME,TYPE,FOLDER NAME,Sample Number,horiz_linescan,linescan,full length vert,no pts,Measured left glass,Measured Subcut layer,Measured dermis,Measured epi,Measured right glass,full length horiz,no pts horiz,Measured left ,measured centre,Measured right
+,control,Control 1,1,no,yes,700,70,3,42,18,3,4,,,,,
+,control,Control 3,18,no,yes,750,75,4,45,18,6,2,,,,,
+,control,Control 4,30,no,yes,680,68,4,36,18,7,3,,,,,
+,control,Control 5,44,no,yes,640,64,3,32,18,6,5,,,,,
+,control,Control 6,4,no,yes,760,76,3,47,18,5,3,,,,,
+,control,Control 7,20,no,yes,800,80,3,49,18,5,5,,,,,
+,control,Control 8,32,no,yes,680,68,0,40,18,7,3,,,,,
+,control,Control 9,45,no,yes,750,75,0,42,18,5,10,,,,,
+,d7,Day7 3,357,yes,yes,1320,132,0,65,30,27,10,590,59,0,31,28
+,d7,Day7 4,25,yes,yes,830,83,4,35,30,9,5,1150,115,43,63,9
+,d7,Day7 5,26,yes,yes,800,80,0,35,30,10,5,980,98,21,49,28
+,d7,Day7 6,359,no,yes,1070,107,0,41,30,27,9,,,,,
+,d14,Day14 1,156,yes,yes,690,69,0,26,30,7,6,340,34,10,24,0
+,d14,Day14 2,166,yes,yes,520,52,0,18,30,4,0,360,36,0,36,0
+,d14,Day14 5,355,yes,yes,890,89,4,47,30,4,4,,,,,
+,d14,Day14 6,356,yes,yes,890,89,6,40,30,9,4,,,,,
+,d21,Day21 1,279,yes,yes,770,77,0,40,30,6,1,630,63,20,43,0
+,d21,Day21 2,280,yes,yes,660,66,0,28,30,6,2,1170,117,31,62,24
+,d21,Day21 3,289,yes,yes,780,78,1,37,30,9,1,930,93,18,40,35
+,d21,Day21 4,298,yes,yes,590,59,0,19,30,7,3,630,63,0,63,0
+,d21,Day21 5,297,yes,yes,720,72,0,30,30,8,4,660,66,0,66,0

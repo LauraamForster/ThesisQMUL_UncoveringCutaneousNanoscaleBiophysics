@@ -1,0 +1,40 @@
+﻿SAMPLE NAME,TYPE,FOLDER NAME,Sample Number,lower dermis,upper dermis,line scan,full length,no pts,Measured left glass,Measured Subcut layer,Measured dermis,Measured epi,Measured right glass,,no pts,
+bleo 3r pbs 1,PBS,PBS-1,308,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 3rf pbs 1.1,PBS,PBS-2,305,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 5r pbs 2.1,PBS,PBS-3,309,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 5r pbs 4.1,PBS,PBS-4,310,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 5r pbs 3.1,PBS,PBS-5,341,yes,yes,yes,590,59,2,35,15,3,4,59,59,0
+bleo 3rs pbs 1 f 2,PBS,PBS-6,342,yes,yes,yes,450,45,0,22,15,6,2,45,45,0
+bleo 3rf 2w 1.1,2W,2W-1,306,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 3rf 2w 4.2,2W,2W-2,311,yes,yes,yes,190,19,0,0,15,4,0,19,19,0
+bleo 3rf 2w 2.2,2W,2W-3,312,yes,yes,yes,270,27,1,5,15,6,0,27,27,0
+bleo 3rs 2w 2,2W,2W-4,326,yes,yes,yes,500,50,0,27,15,5,3,50,50,0
+bleo3rs 2w 1,2W,2W-5,324,yes,yes,yes,440,44,0,23,15,6,0,44,44,0
+bleo 3r 4w 1,4W_3R,4W_3R-1,307,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 3rf 4w 1.1,4W_3R,4W_3R-2,313,yes,yes,yes,360,36,0,11,15,9,1,36,36,0
+bleo 3rf 4w 2.1,4W_3R,4W_3R-3,304,yes,yes,no,0,0,0,0,0,0,0,0,0,0
+bleo 5r 4k 4.2,4W_5R,4W_5R-1,322,yes,yes,yes,360,36,0,18,15,3,0,36,36,0
+bleo 5r 4w 1.1,4W_5R,4W_5R-2,321,yes,yes,yes,310,31,0,12,15,4,0,31,31,0
+bleo 5r 4w 2.1,4W_5R,4W_5R-3,320,yes,yes,yes,360,36,0,15,15,6,0,36,36,0
+bleo 5r 4wk 5.1,4W_5R,4W_5R-4,323,yes,yes,yes,550,55,0,35,15,5,0,55,55,0
+bleo 5r 4wk 3.2 f,4W_5R,4W_5R-5,332,yes,yes,yes,460,46,0,26,15,5,0,46,46,0
+bleo 5r pbsokn 5.2,PBS_OKN,PBS_OKN-1,319,yes,yes,yes,200,20,0,0,15,3,2,20,20,0
+bleo 4r pbs okn 2.1,PBS_OKN,PBS_OKN-2,339,yes,yes,yes,630,63,0,48,15,0,0,63,63,0
+bleo 5r pbsokn 3.1,PBS_OKN,PBS_OKN-3,340,yes,yes,yes,690,69,1,47,15,4,2,69,69,0
+bleo 5r 4wokn 1.1,4W_OKN,4W_OKN-1,318,yes,yes,yes,260,26,0,5,15,4,2,26,26,0
+bleo 5r 4wokn 3.1,4W_OKN,4W_OKN-2,316,yes,yes,yes,470,47,0,31,15,1,0,47,47,0
+bleo 5r 4wokn 5.1,4W_OKN,4W_OKN-3,314,yes,yes,yes,390,39,0,18,15,6,0,39,39,0
+bleo 5r 4wokn 2.1,4W_OKN,4W_OKN-4,315,yes,yes,yes,390,39,0,17,15,7,0,39,39,0
+bleo 5r 4wokn 4.1,4W_OKN,4W_OKN-5,317,yes,yes,yes,470,47,0,25,15,6,1,47,47,0
+bleo4r pbs+m10,PBS_MET,PBS_MET-1,336,yes,yes,yes,540,54,3,28,15,7,1,54,54,0
+bleo 4r pbs+m11,PBS_MET,PBS_MET-2,337,yes,yes,yes,740,74,0,51,15,8,0,74,74,0
+bleo4r pbs+m12,PBS_MET,PBS_MET-3,338,yes,yes,yes,600,60,0,40,15,5,0,60,60,0
+bm 11,BM_MET,BM_MET-1,331,yes,yes,yes,710,71,0,50,15,6,0,71,71,0
+bm 12,BM_MET,BM_MET-2,329,yes,yes,yes,500,50,0,28,15,6,1,50,50,0
+BM 14,BM_MET,BM_MET-3,330,yes,yes,yes,500,50,0,29,15,4,2,50,50,0
+bleo 4r bm10,BM_MET,BM_MET-4,334,yes,yes,yes,450,45,0,23,15,5,2,45,45,0
+bleo bm 13.1 m,BM_MET,BM_MET-5,333,yes,yes,yes,410,41,0,17,15,5,4,41,41,0
+bleo 4r 4w 8 51.6,4W_MET,4W_MET-1,325,yes,yes,yes,580,58,0,35,15,6,2,58,58,0
+bleo 4r 4w 9,4W_MET,4W_MET-2,327,yes,yes,yes,500,50,0,30,15,4,1,50,50,0
+bleo 4r 4w 10,4W_MET,4W_MET-3,328,yes,yes,yes,490,49,0,29,15,4,1,49,49,0
+bleo 4r 4w 4 m,4W_MET,4W_MET-4,335,yes,yes,no,0,0,0,0,0,0,0,0,0,0
